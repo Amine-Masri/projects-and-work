@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Filmographie [ 
+<!ELEMENT Filmographie (film*) >
+<!ATTLIST Filmographie nom CDATA #REQUIRED >
+<!ATTLIST Filmographie date CDATA #REQUIRED >
+<!ELEMENT film (titre,acteur,genre?)>
+<!ELEMENT titre (#PCDATA)>
+<!ELEMENT acteur (#PCDATA)>
+<!ELEMENT genre (#PCDATA)>]>
+
+<Filmographie date="2023-09-25" nom="amin">
+    <film>
+        <titre>titre 1</titre>
+        <acteur>acteur 1</acteur>
+    </film>
+    <film>
+        <titre>titre2</titre>
+        <acteur>acteur 2</acteur>
+        <genre>Action</genre>
+    </film>
+
+    
+</Filmographie>

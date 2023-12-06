@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\WebApplication4Elaa.props" />
+</Project>

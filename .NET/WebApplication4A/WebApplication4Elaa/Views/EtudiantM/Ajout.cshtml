@@ -1,0 +1,41 @@
+﻿@Model IEnumerable<WebApplication4Elaa.Models.Etudiant>
+<table>
+    <tbody>
+        <form asp-action="Ajout" method="post">
+            <tr>
+                <td>
+                    @Html.LabelFor(x=>x.Nom)
+            </td>
+                    <td><input asp-for="Nom" /></td>
+         
+            </tr>
+        <tr>
+            <td>
+                    @Html.LabelFor(x=>x.Prenom)
+            </td>
+            <td><input asp-for="Prenom" /></td>
+
+        </tr>
+        <tr>
+            <td>
+                    @Html.LabelFor(x=>x.DateN)
+            </td>
+            <td><input asp-for="DateN" /></td>
+
+        </tr>
+        <tr>
+            <td>
+                    <label asp-for="Groupes"></label>
+            </td>
+            <td> <select asp-for="Groupes" asp-items="ViewBag.Groupes"></select></td>
+        </tr>
+        <tr>
+            <td>
+                <input type="submit" class="btn btn-primary"/>
+                <a asp-action="Index" class="btn btn-primary">Retour</a>
+            </td>
+            
+        </tr>
+        </form>
+    </tbody>
+</table>

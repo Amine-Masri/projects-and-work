@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<biblio>
+  <livre>
+    <!-- Élément enfant titre -->
+    <titre>Les Misérables</titre> <auteur>Victor Hugo</auteur>
+    <nb_tomes>3</nb_tomes>
+  </livre>
+  <livre>
+    <titre>L'Assomoir</titre> 
+    <auteur>Émile Zola</auteur>
+  </livre>
+  <livre lang="en">
+    <titre>David Copperfield</titre> 
+    <auteur>Charles Dickens</auteur>
+    <nb_tomes>3</nb_tomes>
+  </livre> 
+</biblio>

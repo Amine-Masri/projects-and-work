@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">TP5</string>
+    <string name="title_activity_inscription">Inscription</string>
+    <string name="action_settings">Settings</string>
+</resources>

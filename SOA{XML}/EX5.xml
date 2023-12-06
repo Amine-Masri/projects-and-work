@@ -1,0 +1,23 @@
+﻿<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:element name="utilisateur-twitter" type="utilisateurType"/>
+<xs:complexType name="utilisateurType">
+<xs:sequence>
+<xs:element name="profil" type="profilType"/>
+<xs:element name="tweet" type="xs:string" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="profilType">
+<xs:sequence>
+<xs:element name="pseudo" type="xs:string"/>
+<xs:element name="password" type="passwordType"/>
+<xs:element name="email" type="xs:string"/>
+</xs:sequence>
+<xs:attribute name="id" type="xs:int" use="required"/>
+</xs:complexType>
+<xs:simpleType name="passwordType">
+<xs:restriction base="xs:string">
+<xs:minLength value="9"/>
+</xs:restriction>
+</xs:simpleType>
+</xs:schema>

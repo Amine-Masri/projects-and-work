@@ -1,0 +1,7 @@
+<!ELEMENT Filmographie (film*)>
+<!ATTLIST Filmographie nom CDATA #REQUIRED >
+<!ATTLIST Filmographie date CDATA #REQUIRED >
+<!ELEMENT film (titre,acteur,genre?)>
+<!ELEMENT titre (#PCDATA)>
+<!ELEMENT acteur (#PCDATA)>
+<!ELEMENT genre (#PCDATA)>

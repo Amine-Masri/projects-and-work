@@ -1,0 +1,47 @@
+﻿@model IEnumerable<WebApplication4Elaa.Models.Etudiant>
+<a asp-action="Ajout" class="btn btn-primary">Ajouter</a> |
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(x => x.Nom)
+            </th>
+            <th>
+                @Html.DisplayNameFor(x => x.Prenom)
+            </th>
+            <th>
+                @Html.DisplayNameFor(x => x.DateN)
+            </th>
+            <th>
+                @Html.DisplayNameFor(x => x.Groupe.LibGroupe)
+            </th>
+
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach(var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(x => item.Nom)
+                </td>
+                <td>
+                    @Html.DisplayFor(x => item.Prenom)
+                </td>
+                <td>
+                    @Html.DisplayFor(x => item.DateN)
+                </td>
+                <td>
+                    @Html.DisplayFor(x => item.Groupe.LibGroupe)
+                </td>
+                <td>
+                <a asp-action="Modif" asp-route-id="@item.Id" class="btn btn-secondary">Modif</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-secondary">Delete</a>
+                </td>
+            </tr>
+        }
+
+    </tbody>
+
+</table>

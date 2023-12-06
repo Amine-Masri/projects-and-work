@@ -1,0 +1,59 @@
+﻿@model WebApplication4Elaa.Models.Etudiant
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Etudiant</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Nom)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Nom)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Prenom)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Prenom)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DateN)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DateN)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Groupe)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Groupe.LibGroupe)
+        </dd>
+    </dl>
+</div>
+<table>
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(x=> x.Inscriptions.FirstOrDefault().Matiere)</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Inscriptions)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(x=>)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
